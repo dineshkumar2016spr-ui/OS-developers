@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171a16">
+  <meta name="description" content="Explore OS Developer projects — open plots at Royal Pearl Valley and premium apartments.">
+  <title>Our Projects · OS Developers</title>
+  <link rel="icon" type="image/png" href="LOGO.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--fg:#f4f0e7;--fg-soft:rgba(244,240,231,.78);--fg-faint:rgba(244,240,231,.62);--shade:#171a16;--rule:rgba(244,240,231,.28);--ease:cubic-bezier(.22,.61,.36,1);--pill-bg:#d5b47d;--pill-fg:#17211d;--gold:#d5b47d}
+    *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;background:var(--shade);scrollbar-color:#c6a15f #17211d;scrollbar-width:thin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#17211d}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#e2c995,#a87832);border:2px solid #17211d;border-radius:999px}::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#f0dba9,#c08a32)}body{margin:0;min-height:100vh;background:var(--shade);color:var(--fg);font-family:'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}a{color:inherit}
+    .chrome{position:relative;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:max(14px,calc(env(safe-area-inset-top,0px) + 12px)) clamp(16px,3.4vw,44px) 14px;background:linear-gradient(to bottom,rgba(23,26,22,.86) 0%,rgba(23,26,22,.58) 72%,rgba(23,26,22,0) 100%)}.mark{display:flex;align-items:center;gap:9px;font:500 15px 'Playfair Display',serif;letter-spacing:.02em;color:var(--fg);text-decoration:none;min-width:0;flex-shrink:1}.mark-logo{display:block;width:38px;height:38px;flex:0 0 38px;object-fit:cover;object-position:center;border-radius:50%;border:1px solid rgba(213,180,125,.7);box-shadow:0 0 14px rgba(213,180,125,.18)}.mark-by{display:block;margin-left:2px;padding-left:12px;border-left:1px solid rgba(213,180,125,.55);font:700 14px 'DM Sans',sans-serif;letter-spacing:.16em;color:#e2c995;white-space:nowrap;text-shadow:0 0 12px rgba(213,180,125,.28)}.nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);flex-shrink:0}.nav a{color:var(--fg);text-decoration:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.88;transition:opacity .3s var(--ease)}.nav a:hover{opacity:1}
+    .page{position:relative;z-index:1;padding:clamp(30px,6vh,70px) clamp(20px,5vw,60px) 40px;min-height:calc(100vh - 66px);text-align:center}.eyebrow{display:flex;align-items:center;justify-content:center;gap:12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#e2c995;margin-bottom:14px}.page h1{font:400 clamp(36px,6.4vw,84px)/1.02 'Playfair Display',Georgia,serif;letter-spacing:-.03em;margin:0 auto;text-shadow:0 2px 24px #080b08a8,0 0 22px rgba(226,201,149,.32)}.page h1 em{color:#c08a32;font-weight:400;text-shadow:0 0 8px rgba(192,138,50,.72),0 0 22px rgba(162,107,29,.55)}.page .lede{margin:14px auto 0;font-size:clamp(15px,1.3vw,18px);line-height:1.65;color:var(--fg-soft);max-width:52ch}
+    .options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,34px);max-width:980px;margin:clamp(34px,6vh,64px) auto 0}
+    .option{position:relative;display:flex;flex-direction:column;overflow:hidden;min-height:clamp(340px,52vh,460px);border-radius:26px;text-decoration:none;color:#fff;border:1px solid rgba(213,180,125,.45);box-shadow:0 26px 54px rgba(18,28,22,.3),inset 0 1px 0 rgba(255,255,255,.3);transition:transform .6s var(--ease),box-shadow .6s var(--ease),border-color .4s ease;will-change:transform;background:#253c32}
+    .option:hover,.option:focus-visible{transform:translateY(-8px) scale(1.015);border-color:rgba(213,180,125,.85);box-shadow:0 44px 82px rgba(18,28,22,.42),0 0 0 1px rgba(213,180,125,.7),0 8px 18px rgba(18,28,22,.2)}
+    .option:focus-visible{outline:3px solid #c08a32;outline-offset:4px}
+    .option .bg{position:absolute;inset:0}
+    .option--plots .bg{background:url('open-plots.png') center/cover}
+    .option--apts .bg{background:url('apartments.png') center/cover}
+    .option .bg:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,25,20,.16) 34%,rgba(13,22,17,.86) 100%)}
+
+    .option .body{position:relative;z-index:1;margin-top:auto;padding:26px 28px 30px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+    .option .tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#e2c995}
+    .option h2{font:400 clamp(26px,2.6vw,34px)/1.15 'Playfair Display',serif;margin:0;letter-spacing:-.01em;text-shadow:0 2px 16px rgba(9,15,11,.62)}
+    .option p{margin:0;font-size:13px;line-height:1.75;color:var(--fg-soft);max-width:34ch}
+    .option .go{display:inline-flex;align-items:center;gap:9px;margin-top:6px;padding:11px 20px;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(10,9,8,.12);transition:transform .4s var(--ease),background .3s ease}
+    .option:hover .go{transform:translateY(-2px);background:#e2c995}
+    .option .go svg{flex:0 0 auto}
+    .back-home{display:inline-flex;align-items:center;gap:8px;margin-top:clamp(30px,5vh,52px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#e2c995;text-decoration:none;opacity:.9}.back-home:hover{opacity:1}
+    .foot{padding:18px clamp(16px,4vw,24px) max(18px,calc(env(safe-area-inset-bottom,0px) + 14px));font-size:10px;letter-spacing:.08em;color:var(--fg-faint);text-align:center}
+    @media(max-width:760px){.options{grid-template-columns:1fr;max-width:440px}.option{min-height:300px}.nav a:not(.nav-keep){display:none}}
+    @media(max-width:420px){.mark-by{font-size:11px;letter-spacing:.12em}.option .body{padding:22px 20px 24px}}
+  </style>
+</head>
+<body>
+  <header class="chrome">
+    <a class="mark" href="index.html" aria-label="OS Developers">
+      <img class="mark-logo" src="LOGO.PNG" alt="OS Developers logo">
+      <span class="mark-by">OS DEVELOPERS</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-keep" href="index.html">← Home</a>
+      <a href="index.html#enquire">Contact</a>
+      <a href="https://wa.me/917836874807?text=Hello%2C%20I%27m%20interested%20in%20Royal%20Pearl%20Valley.%20Please%20share%20property%20details." style="opacity:1">Enquire</a>
+    </nav>
+  </header>
+  <main class="page">
+    <div class="eyebrow">OS Developers · Our Projects</div>          <h1>Choose your <em>project.</em></h1>
+    <p class="lede">Two ways to build your future with us — open plots or premium apartments. Enquire today and our team will help you take the next step.</p>
+    <div class="options">
+      <a class="option option--plots" href="open-plots.html" aria-label="Open plots by OS Developers">
+        <span class="bg" aria-hidden="true"></span>
+        <span class="body">
+          <span class="tag">OS Developers</span>
+          <h2>Open Plots</h2>
+          <p>Book your dream plot.</p>
+          <span class="go">Explore plots <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </span>
+      </a>
+      <a class="option option--apts" href="apartments.html" aria-label="Apartments by OS Developers">
+        <span class="bg" aria-hidden="true"></span>
+        <span class="body">
+          <span class="tag">OS Developers</span>
+          <h2>Apartments</h2>
+          <p>Book your dream home.</p>
+          <span class="go">Explore apartments <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 6h9M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </span>
+      </a>
+    </div>
+    <a class="back-home" href="index.html">↖ Back to Royal Pearl Valley</a>
+  </main>
+  <footer class="foot">© <span id="year"></span> OS Developers · LINGAMPALLY · TELANGANA</footer>
+  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>

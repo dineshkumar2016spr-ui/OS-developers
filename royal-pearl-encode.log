@@ -1,0 +1,78 @@
+[in#0 @ 000001de72a2f9c0] Unknown cover type: 0x1.
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'LOGO-VIDEO.MOV':
+  Metadata:
+    bitrate         : 104857600
+    mdat_pos        : 28
+    maxrate         : 0
+    compatible_brands: qt  ;qt  
+    moov_pos        : 14185433
+    minor_version   : 512;512
+    encoder         : Lavf57.71.100
+    Hw              : 1
+    major_brand     : qt  ;qt  
+    creation_time   : 2026-10-19T14:12:49.000000Z;2026-10-19T14:12:49Z
+    te_is_reencode  : 1
+    DreaminaMetaInfo: {"data":{}}
+  Duration: 00:00:06.01, start: 0.000000, bitrate: 18889 kb/s
+  Stream #0:0[0x1](eng): Video: hevc (Main) (hvc1 / 0x31637668), yuv420p(tv, bt709), 3840x2160, 18786 kb/s, 60 fps, 60 tbr, 1000k tbn (default)
+    Metadata:
+      creation_time   : 2026-10-19T14:12:49.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : FFMP
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 126 kb/s (default)
+    Metadata:
+      creation_time   : 2026-10-19T14:12:49.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (hevc (native) -> hevc (libx265))
+Press [q] to stop, [?] for help
+x265 [info]: HEVC encoder version 4.3+45-116b875
+x265 [info]: build info [Windows][GCC 16.2.0][64 bit] 8bit+10bit+12bit
+x265 [info]: using cpu capabilities: MMX2 SSE2Fast LZCNT SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+x265 [info]: Main profile, Level-5.1 (Main tier)
+x265 [info]: Thread pool created using 4 threads
+x265 [info]: frame threads / pool features       : 2 / wpp(34 rows)
+x265 [info]: Slices                              : 1
+x265 [info]: Coding QT: max CU size, min CU size : 64 / 8
+x265 [info]: Residual QT: max TU size, max depth : 32 / 1 inter / 1 intra
+x265 [info]: ME / range / subpel / merge         : hex / 57 / 2 / 3
+x265 [info]: Keyframe min / max / scenecut / bias  : 25 / 250 / 40 / 5.00 
+x265 [info]: Lookahead / bframes / badapt        : 20 / 4 / 2
+x265 [info]: b-pyramid / weightp / weightb       : 1 / 1 / 0
+x265 [info]: References / ref-limit  cu / depth  : 3 / off / on
+x265 [info]: AQ: mode / str / qg-size / cu-tree  : 2 / 1.0 / 32 / 1
+x265 [info]: Rate Control / qCompress            : CRF-20.0 / 0.60
+x265 [info]: tools: rd=3 psy-rd=2.00 early-skip rskip mode=1 signhide tmvp
+x265 [info]: tools: b-intra strong-intra-smoothing lslices=8 deblock sao
+x265 [info]: tools: dhdr10-info
+Output #0, mp4, to 'royal-pearl-intro-hq.mp4':
+  Metadata:
+    bitrate         : 104857600
+    mdat_pos        : 28
+    maxrate         : 0
+    compatible_brands: qt  ;qt  
+    moov_pos        : 14185433
+    minor_version   : 512;512
+    te_is_reencode  : 1
+    Hw              : 1
+    major_brand     : qt  ;qt  
+    DreaminaMetaInfo: {"data":{}}
+    encoder         : Lavf63.1.102
+  Stream #0:0(eng): Video: hevc (hvc1 / 0x31637668), yuv420p(tv, bt709, progressive), 3840x2160, q=2-31, 60 fps, 15360 tbn (default)
+    Metadata:
+      encoder         : Lavc63.1.102 libx265
+      creation_time   : 2026-10-19T14:12:49.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : FFMP
+    Side data:
+      CPB properties: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[mp4 @ 000001de72b07840] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001de72ad7d40] video:5873KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:2KiB muxing overhead: 0.127116%
+frame=  360 fps=4.1 q=31.0 Lsize=    5881KiB time=00:00:05.96 bitrate=8074.0kbits/s speed=0.0671x elapsed=0:01:28.86    
+x265 [info]: frame I:      2, Avg QP:19.88  kb/s: 16261.92
+x265 [info]: frame P:    109, Avg QP:23.47  kb/s: 17970.72
+x265 [info]: frame B:    249, Avg QP:29.35  kb/s: 3593.54 
+x265 [info]: Weighted P-Frames: Y:6.4% UV:0.9%
+
+encoded 360 frames in 88.71s (4.06 fps), 8017.01 kb/s, Avg QP:27.51

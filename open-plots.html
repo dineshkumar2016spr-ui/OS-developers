@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171a16">
+  <meta name="description" content="Open plots by OS Developers — Prestige County, SBR City, Royal City, Silver City and Royal Paradise Farm Land.">
+  <title>Open Plots · OS Developers</title>
+  <link rel="icon" type="image/png" href="LOGO.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--fg:#f4f0e7;--fg-soft:rgba(244,240,231,.78);--fg-faint:rgba(244,240,231,.62);--shade:#171a16;--ease:cubic-bezier(.22,.61,.36,1);--gold:#d5b47d}
+    *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;background:var(--shade);scrollbar-color:#c6a15f #17211d;scrollbar-width:thin}::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#17211d}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#e2c995,#a87832);border:2px solid #17211d;border-radius:999px}::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#f0dba9,#c08a32)}body{margin:0;min-height:100vh;background:var(--shade);color:var(--fg);font-family:'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}a{color:inherit}
+    .chrome{position:relative;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:max(14px,calc(env(safe-area-inset-top,0px) + 12px)) clamp(16px,3.4vw,44px) 14px;background:linear-gradient(to bottom,rgba(23,26,22,.86) 0%,rgba(23,26,22,.58) 72%,rgba(23,26,22,0) 100%)}.mark{display:flex;align-items:center;gap:9px;font:500 15px 'Playfair Display',serif;color:var(--fg);text-decoration:none;min-width:0}.mark-logo{display:block;width:38px;height:38px;flex:0 0 38px;object-fit:cover;border-radius:50%;border:1px solid rgba(213,180,125,.7);box-shadow:0 0 14px rgba(213,180,125,.18)}.mark-by{display:block;margin-left:2px;padding-left:12px;border-left:1px solid rgba(213,180,125,.55);font:700 14px 'DM Sans',sans-serif;letter-spacing:.16em;color:#e2c995;white-space:nowrap}.nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,32px)}.nav a{color:var(--fg);text-decoration:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.88;transition:opacity .3s var(--ease)}.nav a:hover{opacity:1}
+    .page{position:relative;z-index:1;padding:clamp(26px,5vh,56px) clamp(18px,4vw,40px) 40px}.eyebrow{display:flex;align-items:center;justify-content:center;gap:12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#e2c995;margin-bottom:14px}.page h1{font:400 clamp(36px,6vw,76px)/1.02 'Playfair Display',Georgia,serif;letter-spacing:-.03em;margin:0 auto;text-align:center;text-shadow:0 2px 24px #080b08a8,0 0 22px rgba(226,201,149,.32)}.page h1 em{color:#c08a32;font-weight:400}.page .lede{margin:12px auto 0;font-size:clamp(14px,1.25vw,17px);line-height:1.65;color:var(--fg-soft);max-width:54ch;text-align:center}
+    .projects{display:flex;flex-direction:column;gap:clamp(40px,7vh,72px);max-width:980px;margin:clamp(34px,6vh,60px) auto 0}
+    .project{display:flex;flex-direction:column;gap:16px;opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .9s var(--ease)}
+    .project.is-visible{opacity:1;transform:none}
+    .project-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-left:2px}
+    .project h2{font:400 clamp(24px,2.6vw,32px)/1.2 'Playfair Display',serif;margin:0;letter-spacing:-.01em;color:#fff}.project h2 em{font-style:normal;color:#e2c995;font-size:.72em;letter-spacing:.05em}
+    .project .name{display:block}.project .name+em{margin-top:6px}
+    .project .head-sub{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#e2c995}
+    .project figure{margin:0;position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(213,180,125,.45);box-shadow:0 26px 54px rgba(18,28,22,.34),inset 0 1px 0 rgba(255,255,255,.3);background:#253c32;transition:transform .6s var(--ease),box-shadow .6s var(--ease),border-color .4s ease}
+    .project figure:hover{transform:translateY(-6px);border-color:rgba(213,180,125,.85);box-shadow:0 42px 78px rgba(18,28,22,.44),0 0 0 1px rgba(213,180,125,.7)}
+    .project img{display:block;width:100%;height:auto;background:#253c32}
+    .project figcaption{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:15px 22px;background:rgba(13,22,17,.9);border-top:1px solid rgba(213,180,125,.3)}.project figcaption span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#e8d5ae}
+    .project .enq{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:var(--gold);color:#17211d;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .4s var(--ease),background .3s ease}.project .enq:hover{transform:translateY(-2px);background:#e2c995}
+    .back{display:inline-flex;align-items:center;gap:8px;margin-top:clamp(30px,5vh,52px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#e2c995;text-decoration:none;opacity:.9}.back:hover{opacity:1}
+    .foot{padding:18px clamp(16px,4vw,24px) max(18px,calc(env(safe-area-inset-bottom,0px) + 14px));font-size:10px;letter-spacing:.08em;color:var(--fg-faint);text-align:center}
+    .fineprint{margin-top:26px;text-align:center;font-size:10px;letter-spacing:.06em;color:var(--fg-faint)}
+    @media(max-width:720px){.nav a:not(.nav-keep){display:none}.mark-by{font-size:11px;letter-spacing:.12em}.project figcaption{padding:13px 16px}}
+  </style>
+</head>
+<body>
+  <header class="chrome">
+    <a class="mark" href="index.html" aria-label="OS Developers">
+      <img class="mark-logo" src="LOGO.PNG" alt="OS Developers logo">
+      <span class="mark-by">OS DEVELOPERS</span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-keep" href="index.html">Home</a>
+      <a href="projects.html">Our Projects</a>
+      <a href="index.html#enquire">Contact</a>
+    </nav>
+  </header>
+  <main class="page">
+    <div class="eyebrow">OS Developers · Open Plots</div>
+    <h1>Open <em>Plots.</em></h1>
+    <p class="lede">Book your dream plot. Explore our open plot projects across Shabaad Highway, Moinabad and Chevella.</p>
+    <div class="projects" id="projects">
+      <section class="project">
+        <div class="project-head"><h2><span class="name">Prestige County</span><em>Bhongiripally · Shabaad Highway</em></h2></div>
+        <figure><img src="prestige-county.png" alt="Layout plan of Prestige County at Bhongiripally, Shabaad Highway showing plots, roads and total area" loading="lazy" decoding="async">
+        <figcaption><span>Bhongiripally · Shabaad Highway</span><a class="enq" href="https://wa.me/917836874807?text=Hello%2C%20I%27m%20interested%20in%20Prestige%20County%2C%20Bhongiripally%20Shabaad%20Highway.%20Please%20share%20plot%20details.">Enquire ↗</a></figcaption></figure>
+      </section>
+      <section class="project">
+        <div class="project-head"><h2><span class="name">SBR City</span><em>Shabaad Highway</em></h2></div>
+        <figure><img src="sbr-city.jpg" alt="Layout plan of SBR City at Shabaad Highway showing plots, wide roads and survey numbers" loading="lazy" decoding="async">
+        <figcaption><span>Shabaad Highway</span><a class="enq" href="https://wa.me/917836874807?text=Hello%2C%20I%27m%20interested%20in%20SBR%20City%2C%20Shabaad%20Highway.%20Please%20share%20plot%20details.">Enquire ↗</a></figcaption></figure>
+      </section>
+      <section class="project">
+        <div class="project-head"><h2><span class="name">Royal City</span><em>Ameerguda Village · Moinabad Main Town</em></h2></div>
+        <figure><img src="royal-city.jpg" alt="Layout plan of Royal City at Ameerguda Village, Moinabad Main Town with entrance arch and marked plots" loading="lazy" decoding="async">
+        <figcaption><span>Ameerguda Village · Moinabad Main Town</span><a class="enq" href="https://wa.me/917836874807?text=Hello%2C%20I%27m%20interested%20in%20Royal%20City%2C%20Ameerguda%20Village%20Moinabad.%20Please%20share%20plot%20details.">Enquire ↗</a></figcaption></figure>
+      </section>
+      <section class="project">
+        <div class="project-head"><h2><span class="name">Silver City</span><em>Moinabad Main Town</em></h2></div>
+        <figure><img src="silver-city.jpg" alt="Layout plan of Silver City at Moinabad Main Town showing plots along Road 22 and Road 30" loading="lazy" decoding="async">
+        <figcaption><span>Moinabad Main Town</span><a class="enq" href="https://wa.me/917836874807?text=Hello%2C%20I%27m%20interested%20in%20Silver%20City%2C%20Moinabad%20Main%20Town.%20Please%20share%20plot%20details.">Enquire ↗</a></figcaption></figure>
+      </section>
+      <section class="project">
+        <div class="project-head"><h2><span class="name">Royal Paradise Farm Land</span><em>Chevella</em></h2></div>
+        <figure><img src="royal-paradise.jpg" alt="Survey plan of Royal Paradise Farm Land at Aloor Village, Chevalla showing farm plots and wide roads" loading="lazy" decoding="async">
+        <figcaption><span>Chevella</span><a class="enq" href="https://wa.me/917836874807?text=Hello%2C%20I%27m%20interested%20in%20Royal%20Paradise%20Farm%20Land%2C%20Chevella.%20Please%20share%20plot%20details.">Enquire ↗</a></figcaption></figure>
+      </section>
+    </div>
+    <a class="back" href="projects.html">↖ Back to our projects</a>
+    <p class="fineprint">Layout and survey images are indicative. Please confirm plot details, availability and prices with the OS Developers sales team.</p>
+  </main>
+  <footer class="foot">© <span id="year"></span> OS Developers · LINGAMPALLY · TELANGANA</footer>
+  <script>
+    document.getElementById("year").textContent=new Date().getFullYear();
+    (function(){var obs="IntersectionObserver" in window?new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("is-visible");obs.unobserve(e.target)}})},{threshold:.08,rootMargin:"0px 0px -4% 0px"}):null;
+      document.querySelectorAll(".project").forEach(function(p){obs?obs.observe(p):p.classList.add("is-visible")});})();
+  </script>
+</body>
+</html>
