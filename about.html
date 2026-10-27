@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171a16">
+  <meta name="description" content="Meet Abbas Rizvi, Sales and Marketing Head at OS Developers — 12+ years of real estate expertise and ₹60+ crore of property sales.">
+  <title>About Us · OS Developers</title>
+  <link rel="icon" type="image/png" href="LOGO.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--fg:#f4f0e7;--fg-soft:rgba(244,240,231,.78);--fg-faint:rgba(244,240,231,.62);--shade:#171a16;--rule:rgba(244,240,231,.28);--ease:cubic-bezier(.22,.61,.36,1);--pill-bg:#d5b47d;--pill-fg:#17211d;--gold:#d5b47d}
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%;background:var(--shade);scrollbar-color:#c6a15f #17211d;scrollbar-width:thin}
+    ::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#17211d}::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#e2c995,#a87832);border:2px solid #17211d;border-radius:999px}::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#f0dba9,#c08a32)}
+    @property --glow-x{syntax:"<percentage>";inherits:true;initial-value:50%}
+    @property --glow-y{syntax:"<percentage>";inherits:true;initial-value:52%}
+    body{margin:0;min-height:100vh;background:radial-gradient(120% 90% at 50% 0%,#1d211b 0%,var(--shade) 58%) fixed,color:var(--fg);font-family:'DM Sans','Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
+    a{color:inherit}
+    body{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M5 2 25 20l-8 1-4 8z' fill='%23e2c995' stroke='%2317211d' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E") 5 2,auto}
+    a,button{cursor:pointer}
+    .chrome{position:absolute;left:0;right:0;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:max(14px,calc(env(safe-area-inset-top,0px) + 12px)) clamp(16px,3.4vw,44px) 14px;background:linear-gradient(to bottom,rgba(23,26,22,.86) 0%,rgba(23,26,22,.58) 72%,rgba(23,26,22,0) 100%)}
+    .mark{display:flex;align-items:center;gap:9px;font:500 15px 'Playfair Display',serif;letter-spacing:.02em;color:var(--fg);text-decoration:none;min-width:0;flex-shrink:1}
+    .mark-logo{display:block;width:38px;height:38px;flex:0 0 38px;object-fit:cover;object-position:center;border-radius:50%;border:1px solid rgba(213,180,125,.7);box-shadow:0 0 14px rgba(213,180,125,.18)}
+    .mark-by{display:block;margin-left:2px;padding-left:12px;border-left:1px solid rgba(213,180,125,.55);font:700 14px 'DM Sans',sans-serif;letter-spacing:.16em;color:#e2c995;white-space:nowrap;text-shadow:0 0 12px rgba(213,180,125,.28)}
+    .nav{display:flex;align-items:center;gap:clamp(14px,2.4vw,32px);flex-shrink:0}
+    .nav a:not(.pill){color:var(--fg);text-decoration:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.88;transition:opacity .3s var(--ease)}
+    .nav a:not(.pill):hover{opacity:1}
+    .nav a:not(.pill).is-here{color:#e2c995;opacity:1}
+    .pill{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 21px;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font-size:13px;font-weight:700;letter-spacing:.08em;text-decoration:none;text-transform:uppercase;white-space:nowrap;border:1px solid rgba(10,9,8,.12);box-shadow:0 1px 0 rgba(255,255,255,.10) inset;-webkit-text-fill-color:var(--pill-fg);transition:transform .4s var(--ease),background .3s var(--ease)}
+    .pill:hover,.pill:focus-visible{transform:translateY(-2px);background:#e2c995}
+    .pill:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+    .meet{position:relative;min-height:100vh;display:grid;place-items:center;padding:clamp(96px,12vh,140px) clamp(18px,4vw,48px) clamp(56px,8vh,96px);overflow:hidden}
+    .glow-field{position:absolute;inset:0;pointer-events:none;background:radial-gradient(46% 52% at var(--glow-x,50%) var(--glow-y,52%),rgba(213,180,125,.16) 0%,rgba(213,180,125,0) 70%);opacity:0;transition:opacity .9s var(--ease),--glow-x .8s var(--ease),--glow-y .8s var(--ease)}
+    .is-active .glow-field{opacity:1}
+    .stage-line{position:absolute;left:0;right:0;top:clamp(120px,16vh,168px);display:flex;align-items:center;justify-content:center;gap:6px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--fg-faint)}
+    .stage-line:before,.stage-line:after{content:'';height:1px;width:clamp(24px,4vw,60px);background:var(--rule)}
+
+    /* the row that holds the portrait and the revealed story.
+       the story is taken OUT of the flow (absolute) so opening it never reflows
+       the centered row — that reflow is what used to make a still cursor stutter */
+    .meet-inner{position:relative;display:flex;align-items:center;justify-content:center;gap:0;width:100%}
+
+    /* the anchor never moves or transforms: it is the stable hover reference zone */
+    .spot-anchor{flex:0 0 auto;display:flex;flex-direction:column;align-items:center}
+
+    .portrait-spot{position:relative;flex:0 0 auto;width:min(340px,58vw);transition:transform .8s var(--ease);transform:translate3d(0,0,0)}
+    /* the slide itself is now a pure transform — nothing in the layout changes as it plays */
+    .is-active .portrait-spot{transform:translate3d(clamp(-360px,-25vw,-240px),0,0)}
+    .portrait{position:relative;display:block;width:100%;aspect-ratio:3/4;outline:none}
+    .portrait img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 26px 38px rgba(0,0,0,.5));transition:filter .5s var(--ease);-webkit-user-drag:none;user-select:none}
+    /* glow halo behind the cut-out photo */
+    .portrait:before{content:'';position:absolute;inset:6% -8% -2%;border-radius:50%;background:radial-gradient(58% 52% at 50% 44%,rgba(226,201,149,.55) 0%,rgba(213,180,125,.22) 44%,rgba(213,180,125,0) 72%);filter:blur(6px);opacity:0;transform:scale(.82);transition:opacity .6s var(--ease),transform .8s var(--ease);pointer-events:none;z-index:-1}
+    .is-active .portrait:before{opacity:1;transform:scale(1)}
+    .is-active .portrait img{filter:drop-shadow(0 26px 38px rgba(0,0,0,.5)) drop-shadow(0 0 26px rgba(226,201,149,.55))}
+    /* welcome glow: shown when the page opens, before any interaction */
+    .meet.is-welcome .glow-field{opacity:1}
+    .meet.is-welcome .portrait:before{opacity:1;transform:scale(1)}
+    .meet.is-welcome .portrait img{filter:drop-shadow(0 26px 38px rgba(0,0,0,.5)) drop-shadow(0 0 26px rgba(226,201,149,.55))}
+    /* nameplate */
+    .plate{margin-top:6px;text-align:center;transition:opacity .5s var(--ease)}
+    .plate .who{display:block;font:500 clamp(17px,2vw,22px)/1.2 'Playfair Display',Georgia,serif;color:var(--fg)}
+    .plate .role{display:block;margin-top:5px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#e2c995}
+    .hint{margin-top:14px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--fg-faint);transition:opacity .45s var(--ease)}
+    .is-active .hint{opacity:0}
+    .is-active .plate{opacity:0}
+
+    /* the story that appears on the right — out of the flow, always laid out,
+       hidden with opacity+visibility only (no width/mass expansion) */
+    .story{position:absolute;left:50%;top:50%;width:min(600px,42vw);max-height:min(86vh,900px);overflow:auto;padding-left:clamp(20px,3.4vw,56px);opacity:0;visibility:hidden;transform:translate3d(38px,-50%,0);pointer-events:none;transition:opacity .55s var(--ease),transform .8s var(--ease),visibility 0s linear .55s}
+    .is-active .story{opacity:1;visibility:visible;pointer-events:auto;transform:translate3d(0,-50%,0);transition:opacity .55s var(--ease),transform .8s var(--ease),visibility 0s}
+    .story-card{background:linear-gradient(145deg,rgba(244,240,231,.07) 0%,rgba(244,240,231,.02) 100%),rgba(23,26,22,.55);border:1px solid rgba(213,180,125,.34);border-radius:24px;padding:clamp(22px,2.6vw,36px);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 30px 60px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08)}
+    .story .eyebrow{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#e2c995;margin-bottom:10px}
+    .story h1{margin:0;font:400 clamp(30px,3.6vw,46px)/1.08 'Playfair Display',Georgia,serif;letter-spacing:-.02em;color:var(--fg)}
+    .story h1 em{font-style:normal;color:#c08a32;text-shadow:0 0 14px rgba(192,138,50,.55)}
+    .story .headline{margin:6px 0 0;font:500 clamp(12px,1.1vw,14px)/1.4 'DM Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-soft)}
+    .story p{margin:16px 0 0;font-size:clamp(13px,1.05vw,15px);line-height:1.85;color:var(--fg-soft);text-wrap:pretty}
+    .story p strong{color:var(--fg);font-weight:600}
+    .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .badge{display:inline-flex;flex-direction:column;gap:2px;padding:10px 16px;border-radius:14px;border:1px solid rgba(213,180,125,.4);background:rgba(213,180,125,.08);min-width:108px}
+    .badge b{font:600 17px 'DM Sans',sans-serif;color:#e2c995;letter-spacing:.02em}
+    .badge span{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-faint)}
+    .story-cta{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:12px 22px;border-radius:999px;background:var(--pill-bg);color:var(--pill-fg);font:700 11px 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(10,9,8,.12);transition:transform .35s var(--ease),background .3s ease}
+    .story-cta:hover{transform:translateY(-2px);background:#e2c995}
+
+    .foot{position:absolute;bottom:0;left:0;right:0;z-index:40;display:flex;justify-content:center;padding:14px clamp(16px,4vw,24px) max(16px,calc(env(safe-area-inset-bottom,0px) + 12px));font-size:11px;line-height:1.45;letter-spacing:.06em;color:var(--fg-faint);text-align:center;background:linear-gradient(to top,rgba(23,26,22,.84) 0%,rgba(23,26,22,.58) 72%,rgba(23,26,22,0) 100%)}
+
+    @media(max-width:900px){
+      .meet-inner{flex-direction:column;gap:22px}
+      .portrait-spot{width:min(280px,62vw)}
+      .story{position:static;width:100%;max-width:620px;max-height:none;padding-left:0;transform:translate3d(0,26px,0)}
+      .is-active .portrait-spot{transform:translate3d(0,-10px,0)}
+      .story{width:100%;max-width:620px;padding-left:0;transform:translate3d(0,26px,0)}
+      .is-active .story{width:100%;transform:translate3d(0,0,0)}
+    }@media(max-width:720px){.chrome{flex-wrap:wrap;row-gap:8px}.nav{order:2;width:100%;justify-content:center;gap:12px 18px;flex-wrap:wrap}.nav a:not(.pill){display:inline-flex;align-items:center;min-height:34px;font-size:10px;letter-spacing:.12em}.meet{padding-top:118px}.plate .who{font-size:15px}.hint{letter-spacing:.16em;font-size:9px}}
+    @media(max-width:420px){
+      .mark-logo{width:32px;height:32px;flex-basis:32px}
+      .mark-by{font-size:11px;padding-left:8px;letter-spacing:.12em}
+      .pill{height:36px;min-height:36px;padding:0 14px;font-size:10px}
+      .portrait-spot{width:min(230px,64vw)}
+      .story-card{border-radius:18px;padding:18px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .portrait-spot,.story,.portrait:before,.portrait img,.plate,.hint,.glow-field,.pill,.story-cta{transition:none!important}
+      .story{transform:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="chrome">
+    <a class="mark" href="index.html" aria-label="OS Developers — back home"><img class="mark-logo" src="LOGO.PNG" alt="OS Developers logo"><span class="mark-by">OS DEVELOPERS</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="projects.html">Our Projects</a>
+      <a href="about.html" class="is-here" aria-current="page">About Us</a>
+      <a href="index.html#enquire">Contact</a>
+      <a class="pill" href="https://wa.me/919625874807?text=Hello%2C%20I%27m%20interested%20in%20OS%20Developers%20properties.%20Please%20share%20details.">Start an enquiry</a>
+    </nav>
+  </header>
+
+  <main class="meet" id="meet">
+    <div class="glow-field" id="glowField" aria-hidden="true"></div>
+    <p class="stage-line" aria-hidden="true">The people behind OS Developers</p>
+
+    <div class="meet-inner" id="meetInner">
+      <div class="spot-anchor" id="spotAnchor">
+        <figure class="portrait-spot" id="portraitSpot">
+          <div class="portrait" id="portrait" tabindex="0" role="button" aria-expanded="false" aria-controls="storyId" aria-label="Portrait of Abbas Rizvi. Hover, tap or press Enter to read his story. Click again to send him back to centre.">
+            <img src="abbas-rizvi.png" alt="Abbas Rizvi, Sales and Marketing Head at OS Developers" width="960" height="1280">
+          </div>
+          <figcaption class="plate">
+            <span class="who">Abbas Rizvi</span>
+            <span class="role">Sales &amp; Marketing Head · OS Developers</span>
+          </figcaption>
+          <span class="hint" id="hint" aria-hidden="true">Hover or tap the portrait</span>
+        </figure>
+      </div>
+
+      <aside class="story" id="storyId">
+        <div class="story-card">
+          <span class="eyebrow">About Us · Meet the team</span>
+          <h1>Abbas <em>Rizvi.</em></h1>
+          <p class="headline">Sales &amp; Marketing Head — OS Developers</p>
+          <p>With over <strong>12–13 years of experience in the real estate industry</strong>, Abbas Rizvi brings extensive expertise in sales, marketing, and property development. Originally from <strong>Delhi NCR</strong>, he has built a strong track record of working across diverse real estate segments.</p>
+          <p>Throughout his career, Abbas has been part of successful property sales involving <strong>₹60+ crore worth of inventory</strong>, covering residential apartments, commercial plots, farmhouses, and other real estate assets.</p>
+          <p>At <strong>OS Developers</strong>, he leads Sales &amp; Marketing with a focus on strategic growth, customer relationships, effective property positioning, and driving strong sales performance. His industry experience and market understanding play a key role in connecting customers with the right real estate opportunities.</p>
+          <div class="badges">
+            <div class="badge"><b>12+ yrs</b><span>Real estate</span></div>
+            <div class="badge"><b>₹60 Cr+</b><span>Inventory sold</span></div>
+            <div class="badge"><b>Delhi NCR</b><span>Origin</span></div>
+          </div>
+          <a class="story-cta" href="https://wa.me/919625874807?text=Hello%2C%20I%27d%20like%20to%20speak%20with%20the%20OS%20Developers%20sales%20team.">Talk to the team ↗</a>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="foot"><span>© <span id="year"></span> OS Developers · Built on trust. Crafted with quality.</span></footer>
+  </main>
+
+  <script>
+    (function(){
+      "use strict";
+      var meet=document.getElementById("meet"),portrait=document.getElementById("portrait"),anchor=document.getElementById("spotAnchor"),field=document.getElementById("glowField"),story=document.getElementById("storyId");
+      document.getElementById("year").textContent=new Date().getFullYear();
+
+      var isCoarse=window.matchMedia("(pointer: coarse)").matches;
+      var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      /* two independent signals build the state:
+         hovering — transient, driven by the cursor over the STABLE anchor
+         pinned   — latched by a click; stays revealed until clicked again
+         welcome  — one-shot glow seen when the page opens */
+      var hovering=false,pinned=false,welcome=true;
+
+      function setGlowPos(){
+        var r=portrait.getBoundingClientRect();
+        field.style.setProperty("--glow-x",((r.left+r.width/2)/window.innerWidth*100).toFixed(2)+"%");
+        field.style.setProperty("--glow-y",((r.top+r.height*.44)/window.innerHeight*100).toFixed(2)+"%");
+      }
+      function ptIn(x,y,r,m){return x>=r.left-m&&x<=r.right+m&&y>=r.top-m&&y<=r.bottom+m}
+      function render(){
+        var on=hovering||pinned;
+        meet.classList.toggle("is-active",on);
+        meet.classList.toggle("is-welcome",welcome&&!on);
+        portrait.setAttribute("aria-expanded",on?"true":"false");
+        if(!reduce) setGlowPos();
+      }
+      function syncGlow(){
+        if(meet.classList.contains("is-active")) setGlowPos();
+      }
+      function togglePin(e){if(e)e.stopPropagation();pinned=!pinned;welcome=false;render()}
+
+      portrait.addEventListener("click",function(e){togglePin(e)});
+      portrait.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();togglePin(e);}});
+
+      if(!reduce){
+        /* the portrait glows the moment the page opens and keeps glowing until the first interaction */
+        field.style.setProperty("--glow-x","50%");field.style.setProperty("--glow-y","52%");
+        setTimeout(render,120);
+      }
+
+      if(isCoarse){
+        /* touch: tap the photo to pin it open, tap anywhere else to send it home */
+        document.addEventListener("click",function(e){
+          if(!anchor.contains(e.target)&&pinned){pinned=false;render()}
+        });
+      }else{
+        /* mouse: hover is judged purely from the cursor position against stable boxes
+           (the never-moving anchor, the current picture rect and the open story), with
+           hysteresis. There is no mouseenter/mouseleave loop at all, so a still cursor
+           can never re-trigger anything, and the reveal can never oscillate. */
+        var leaveTimer=null;
+        var isHoverZone=function(x,y){
+          var m=hovering?46:12; /* stickier once already hovering */
+          return ptIn(x,y,anchor.getBoundingClientRect(),m)
+            || ptIn(x,y,portrait.getBoundingClientRect(),m)
+            || (hovering&&ptIn(x,y,story.getBoundingClientRect(),m));
+        };
+        document.addEventListener("mousemove",function(e){
+          if(leaveTimer){
+            /* collapse is winding down — cancel it if the cursor came back into the zone */
+            if(isHoverZone(e.clientX,e.clientY)){clearTimeout(leaveTimer);leaveTimer=null}
+            else return;
+          }
+          if(isHoverZone(e.clientX,e.clientY)){
+            if(!hovering&&!pinned){hovering=true;welcome=false;render()}
+          }else if(!pinned){
+            leaveTimer=setTimeout(function(){leaveTimer=null;if(!pinned){hovering=false;welcome=false;render()}},120);
+          }
+        },{passive:true});
+        document.addEventListener("click",function(e){
+          if(pinned&&!anchor.contains(e.target)){pinned=false;welcome=false;render()}
+        });
+        window.addEventListener("resize",syncGlow);
+      }
+    })();
+  </script>
+</body>
+</html>
