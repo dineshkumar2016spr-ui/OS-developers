@@ -30,7 +30,25 @@
     .back{display:inline-flex;align-items:center;gap:8px;margin-top:clamp(30px,5vh,52px);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#e2c995;text-decoration:none;opacity:.9}.back:hover{opacity:1}
     .foot{padding:18px clamp(16px,4vw,24px) max(18px,calc(env(safe-area-inset-bottom,0px) + 14px));font-size:10px;letter-spacing:.08em;color:var(--fg-faint);text-align:center}
     .fineprint{margin-top:26px;text-align:center;font-size:10px;letter-spacing:.06em;color:var(--fg-faint)}
-    @media(max-width:720px){.chrome{flex-wrap:wrap;row-gap:8px}.nav{order:2;width:100%;justify-content:center;gap:12px 18px;flex-wrap:wrap}.nav a{display:inline-flex;align-items:center;min-height:34px;font-size:10px;letter-spacing:.12em}.mark-by{font-size:11px;letter-spacing:.12em}.project figcaption{padding:13px 16px}}
+    /* Royal Pearl Valley hero card */
+    .project--rpv{position:relative;border-radius:28px;overflow:hidden;min-height:clamp(420px,60vh,640px);display:flex;flex-direction:column;justify-content:flex-end;border:1px solid rgba(213,180,125,.65);box-shadow:0 34px 80px rgba(18,28,22,.45),inset 0 1px 0 rgba(255,255,255,.28);margin-bottom:16px}
+    .project--rpv .rpv-bg{position:absolute;inset:0;background:url('RVP ENTRANCE.PNG') center/cover;transition:transform 8s ease}
+    .project--rpv:hover .rpv-bg{transform:scale(1.04)}
+    .project--rpv .rpv-bg:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,15,12,.12) 0%,rgba(9,15,12,.70) 52%,rgba(9,15,12,.94) 100%)}
+    .project--rpv .rpv-body{position:relative;z-index:1;padding:clamp(30px,5vh,56px) clamp(22px,5vw,52px);display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+    .project--rpv .rpv-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(213,180,125,.18);border:1px solid rgba(213,180,125,.55);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#e2c995}
+    .project--rpv .rpv-badge svg{flex:0 0 auto}
+    .project--rpv h2{font:400 clamp(30px,4.5vw,60px)/1.1 'Playfair Display',serif;margin:0;letter-spacing:-.02em;color:#fff;text-shadow:0 3px 28px rgba(9,15,11,.65)}
+    .project--rpv h2 em{font-style:normal;color:#e2c995}
+    .project--rpv .rpv-desc{font-size:clamp(13px,1.1vw,16px);line-height:1.8;color:rgba(244,240,231,.8);max-width:52ch;margin:0}
+    .project--rpv .rpv-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+    .project--rpv .rpv-tag{padding:5px 12px;border-radius:999px;border:1px solid rgba(213,180,125,.38);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#e2c995}
+    .project--rpv .rpv-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+    .project--rpv .rpv-enq{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:999px;background:var(--gold);color:#17211d;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .4s var(--ease),background .3s ease}
+    .project--rpv .rpv-enq:hover{transform:translateY(-2px);background:#e2c995}
+    .project--rpv .rpv-layout{display:inline-flex;align-items:center;gap:9px;padding:12px 22px;border-radius:999px;border:1px solid rgba(213,180,125,.55);color:#e2c995;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:transform .4s var(--ease),background .3s ease}
+    .project--rpv .rpv-layout:hover{transform:translateY(-2px);background:rgba(213,180,125,.12)}
+    @media(max-width:720px){.chrome{flex-wrap:wrap;row-gap:8px}.nav{order:2;width:100%;justify-content:center;gap:12px 18px;flex-wrap:wrap}.nav a{display:inline-flex;align-items:center;min-height:34px;font-size:10px;letter-spacing:.12em}.mark-by{font-size:11px;letter-spacing:.12em}.project figcaption{padding:13px 16px}.project--rpv .rpv-body{padding:22px 20px 30px}}
   </style>
 </head>
 <body>
@@ -51,6 +69,29 @@
     <h1>Open <em>Plots.</em></h1>
     <p class="lede">Book your dream plot. Explore our open plot projects across Shabaad Highway, Moinabad and Chevella.</p>
     <div class="projects" id="projects">
+      <!-- Royal Pearl Valley — Featured Project -->
+      <section class="project project--rpv">
+        <div class="rpv-bg" aria-hidden="true"></div>
+        <div class="rpv-body">
+          <span class="rpv-badge">
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="4.5" stroke="#e2c995" stroke-width="1.2"/><circle cx="6" cy="6" r="1.8" fill="#e2c995"/></svg>
+            Featured Project
+          </span>
+          <h2>Royal Pearl <em>Valley</em></h2>
+          <p class="rpv-desc">A thoughtfully planned plotted community in Lingampally, Kamkole — with green open areas, internal roads, and a welcoming gated entrance. Find your perfect plot and build the home you've always imagined.</p>
+          <div class="rpv-tags">
+            <span class="rpv-tag">Lingampally · Kamkole</span>
+            <span class="rpv-tag">Sangareddy, Telangana</span>
+            <span class="rpv-tag">NH 65 Access</span>
+            <span class="rpv-tag">Gated Community</span>
+          </div>
+          <p class="rpv-loc">Set in Lingampally, Kamkole — a quiet new neighbourhood with easy access to National Highway 65.</p>
+          <div class="rpv-actions">
+            <a class="rpv-enq" href="https://wa.me/919625874807?text=Hello%2C%20I%27m%20interested%20in%20Royal%20Pearl%20Valley.%20Please%20share%20plot%20availability%20and%20pricing.">Enquire now ↗</a>
+            <a class="rpv-layout" href="index.html#plots">View layout map</a>
+          </div>
+        </div>
+      </section>
       <section class="project">
         <div class="project-head"><h2><span class="name">Prestige County</span><em>Bhongiripally · Shabaad Highway</em></h2></div>
         <figure><img src="prestige-county.png" alt="Layout plan of Prestige County at Bhongiripally, Shabaad Highway showing plots, roads and total area" loading="lazy" decoding="async">
@@ -76,9 +117,8 @@
         <figure><img src="royal-paradise.jpg" alt="Survey plan of Royal Paradise Farm Land at Aloor Village, Chevalla showing farm plots and wide roads" loading="lazy" decoding="async">
         <figcaption><span>Chevella</span><a class="enq" href="https://wa.me/919625874807?text=Hello%2C%20I%27m%20interested%20in%20Royal%20Paradise%20Farm%20Land%2C%20Chevella.%20Please%20share%20plot%20details.">Enquire ↗</a></figcaption></figure>
       </section>
+      <p class="fineprint">Layout and survey images are indicative. Please confirm plot details, availability and prices with the OS Developers sales team.</p>
     </div>
-    <a class="back" href="projects.html">↖ Back to our projects</a>
-    <p class="fineprint">Layout and survey images are indicative. Please confirm plot details, availability and prices with the OS Developers sales team.</p>
   </main>
   <footer class="foot">© <span id="year"></span> OS Developers · LINGAMPALLY · TELANGANA</footer>
   <script>
